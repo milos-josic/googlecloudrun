@@ -1,0 +1,32 @@
+{
+  "name": "google_cloud_run_example",
+  "version": "0.0.0",
+  "description": "google_cloud_run_example",
+  "main": "src/index.ts",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "@types/async": "^3.0.3",
+    "@types/chai": "^4.2.3",
+    "@types/faker": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^8.0.14",
+    "@types/request": "^2.48.3",
+    "@types/sinon": "^7.5.0",
+    "@types/chai-as-promised": "^7.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "sinon": "^7.5.0",
+    "ts-node": "^8.4.1"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "start": "npm run-script build && node out/src/index.js",
+    "test-debug": "mocha --timeout 15000 -r ts-node/register test/**/task-repository.spec.ts"
+  },
+  "dependencies": {
+    "typescript": "^3.6.4"
+  }
+}
