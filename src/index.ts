@@ -1,5 +1,22 @@
 
-let port = 0;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
 
-console.log(`Node Server listening on the port: ${port}`);
+const dateStart = Date.now();
+
+app.get('/', (req, res) => {
+  const today = new Date();
+
+  res.json({
+    date: today,
+    up: `${(Date.now() - dateStart) / 1000} seg.`,
+    headers: req.headers
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Server running on port: ${port}`);
+  console.log('Press CTRL + C to quit');
+})
 

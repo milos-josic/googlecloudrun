@@ -27,6 +27,7 @@
     "test-debug": "mocha --timeout 15000 -r ts-node/register test/**/task-repository.spec.ts"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "typescript": "^3.6.4"
   }
 }
