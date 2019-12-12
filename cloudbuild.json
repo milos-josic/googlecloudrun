@@ -18,7 +18,7 @@
               "-f", 
               "Dockerfile",
               "-t",
-              "cbAppImage",
+              "cbapp_image",
               "."
             ]
         },
@@ -30,7 +30,7 @@
             "deploy",
             "CBApp",
             "--image",
-            "cbAppImage",
+            "cbapp_image",
             "--region",
             "europe-west1",
             "--platform",
