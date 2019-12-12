@@ -28,7 +28,7 @@
             "beta",
             "run",
             "deploy",
-            "CBApp",
+            "cbapp",
             "--image",
             "cbapp_image",
             "--region",
