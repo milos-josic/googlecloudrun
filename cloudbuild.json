@@ -1,3 +1,42 @@
 {
-    
+    "steps": [
+        {
+            "name": "gcr.io/cloud-builders/docker",
+            "args": [
+              "build",
+              "-f", 
+              "runTests.Dockerfile",
+              "-t",
+              "test_runner",
+              "."
+            ]
+        },
+        {
+            "name": "gcr.io/cloud-builders/docker",
+            "args": [
+              "build",
+              "-f", 
+              "Dockerfile",
+              "-t",
+              "cbAppImage",
+              "."
+            ]
+        },
+        {
+          "name": "gcr.io/cloud-builders/gcloud",
+          "args": [
+            "beta",
+            "run",
+            "deploy",
+            "CBApp",
+            "--image",
+            "cbAppImage",
+            "--region",
+            "europe-west1",
+            "--platform",
+            "managed",
+            "--allow-unauthenticated"
+          ]
+        }
+    ]
 }

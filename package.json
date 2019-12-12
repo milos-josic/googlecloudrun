@@ -23,12 +23,14 @@
   },
   "scripts": {
     "build": "tsc --build",
-    "start": "npm run-script build && node out/src/index.js",
-    "test-debug": "mocha --timeout 15000 -r ts-node/register test/**/task-repository.spec.ts"
+    "start": "npm run-script build && node out/src/start-app-service.js",
+    "test-debug": "mocha --timeout 15000 -r ts-node/register test/**/base-server.spec.ts",
+    "test": "mocha -r ts-node/register test/**/*.spec.ts"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "eslint": "^6.7.2",
     "express": "^4.17.1",
-    "typescript": "^3.6.4",
-    "cors": "^2.8.5"
+    "typescript": "^3.6.4"
   }
 }

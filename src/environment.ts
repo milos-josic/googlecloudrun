@@ -1,5 +1,4 @@
 
-
 export class Environment{
     public static getServiceName(): string {
         return process.env.SERVICE_NAME || "app-service";
