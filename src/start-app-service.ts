@@ -5,7 +5,7 @@ import { AppBootstrapper } from './server/app-bootstrapper';
 
 (async () => {
      
-    console.log('App Service HTTP API running');
+    console.log('App Service HTTP API running.');
     await AppBootstrapper.init();
     const server: AppServer = new AppServer(express());
     await server.start();
