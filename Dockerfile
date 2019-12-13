@@ -57,5 +57,5 @@ EXPOSE 8080
 # #example on building this image docker build -t "test-app-image" .
 # #example on starting container based on this image: 
 # #docker run -p 83:8080 --name test-container test-app-image 
-CMD ["node", "src/index.js"]
+CMD ["node", "src/start-app-service.js"]
 
