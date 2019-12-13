@@ -18,7 +18,7 @@
               "-f", 
               "Dockerfile",
               "-t",
-              "gcr.io/cbprojectid/cbapp_image",
+              "gcr.io/direct-link-261314/cbapp_image",
               "."
             ]
         },
@@ -26,7 +26,7 @@
             "name": "gcr.io/cloud-builders/docker",
             "args": [
               "push",
-              "gcr.io/cbprojectid/cbapp_image"
+              "gcr.io/direct-link-261314/cbapp_image"
             ]
           },
         {
@@ -37,7 +37,7 @@
             "deploy",
             "cbapp",
             "--image",
-            "gcr.io/cbprojectid/cbapp_image",
+            "gcr.io/direct-link-261314/cbapp_image",
             "--region",
             "europe-west1",
             "--platform",
