@@ -37,7 +37,7 @@
             "deploy",
             "cbapp",
             "--image",
-            "gcr.io/direct-link-261314/cbapp_image",
+            "gcr.io/direct-link-261314/cbapp_image:latest",
             "--region",
             "europe-west1",
             "--platform",
